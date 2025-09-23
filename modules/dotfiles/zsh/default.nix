@@ -33,21 +33,26 @@
           src = pkgs.zsh-syntax-highlighting;
           file = "share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh";
         }
-        {
-          name = "powerlevel10k";
-          src = pkgs.zsh-powerlevel10k;
-          file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-        }
-        {
-          name = "powerlevel10k-config";
-          src = lib.cleanSource ../powerlevel10k;
-          file = "p10k.zsh";
-        }
       ];
+
       initContent = ''
+        zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
+        zstyle ':completion:*' menu yes=long select
+        zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+        bindkey -e
+        bindkey '^p' history-search-backward
+        bindkey '^n' history-search-forward
+        bindkey '^[[Z' reverse-menu-complete
+
         # OpenJDK 8
         export JAVA_HOME="/usr/local/opt/openjdk@8/libexec/openjdk.jdk/Contents/Home"
       '';
+    };
+
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
     };
 
     direnv = {
