@@ -9,8 +9,7 @@
     ../../modules/dotfiles/kitty/default.nix
     ../../modules/dotfiles/linearmouse/default.nix
     ../../modules/dotfiles/neofetch/default.nix
+    ../../modules/dotfiles/starship/default.nix
     ../../modules/dotfiles/zsh/default.nix
-
-    # ../../modules/dotfiles/git/work.nix
   ];
 }
