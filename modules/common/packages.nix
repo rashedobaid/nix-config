@@ -21,6 +21,5 @@
     vscode
     # winbox
     wget
-    zed-editor
   ];
 }
