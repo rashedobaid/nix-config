@@ -33,6 +33,16 @@
           src = pkgs.zsh-syntax-highlighting;
           file = "share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh";
         }
+        {
+          name = "powerlevel10k";
+          src = pkgs.zsh-powerlevel10k;
+          file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        }
+        {
+          name = "powerlevel10k-config";
+          src = lib.cleanSource ../powerlevel10k;
+          file = "p10k.zsh";
+        }
       ];
 
       initContent = ''
