@@ -6,6 +6,7 @@
     discord
     docker
     docker-compose
+    docker-credential-helpers
     gh
     jetbrains.idea-community
     neofetch
@@ -15,6 +16,7 @@
     obsidian
     opentofu
     postman
+    python313
     ripgrep
     spotify
     terragrunt
