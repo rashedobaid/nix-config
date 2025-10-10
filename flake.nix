@@ -5,10 +5,9 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
     let
       lib = nixpkgs.lib;
 
@@ -22,6 +21,7 @@
         modules =
           (importAll ./modules/common) ++
           (importAll ./modules/darwin) ++
+          (importAll ./modules/darwin/lunaria) ++
           [
             home-manager.darwinModules.home-manager
             {
@@ -29,18 +29,8 @@
               home-manager.useUserPackages = true;
               home-manager.users.rashedobaid = import ./users/rashedobaid/default.nix;
             }
-            nix-homebrew.darwinModules.nix-homebrew
-            {
-              nix-homebrew = {
-                enable = true;
-                enableRosetta = true;
-                user = "rashedobaid";
-                autoMigrate = true;
-              };
-            }
           ];
       };
-
       nixosConfigurations."linux" = nixpkgs.lib.nixosSystem {
         modules =
           (importAll ./modules/common) ++
@@ -50,7 +40,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.rashedobaid = import ./users/rashedobaid/rashedobaid.nix;
+              home-manager.users.rashedobaid = import ./users/rashedobaid/default.nix;
             }
           ];
       };
