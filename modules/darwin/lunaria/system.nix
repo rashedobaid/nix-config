@@ -41,6 +41,7 @@
     };
     dock = {
       tilesize = 35;
+      autohide = true;
       autohide-delay = 0.0;
       autohide-time-modifier = 0.4;
     };
@@ -48,6 +49,9 @@
       "com.apple.sound.beep.volume" = 0.0;
       InitialKeyRepeat = 13;
       KeyRepeat = 2;
+    };
+    screencapture = {
+      location = "~/Pictures/Screenshots";
     };
   };
 
