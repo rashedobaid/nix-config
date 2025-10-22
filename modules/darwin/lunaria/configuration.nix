@@ -52,6 +52,7 @@
       "telegram"
       "tunnelblick@beta"
       "viber"
+      "vlc"
       "zen"
     ];
     brews = [
