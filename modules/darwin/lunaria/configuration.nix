@@ -16,6 +16,7 @@
     gh
     iperf3
     jetbrains.idea-community
+    maven
     nixpkgs-fmt
     nixfmt-rfc-style
     obsidian
