@@ -53,6 +53,11 @@
     screencapture = {
       location = "~/Pictures/Screenshots";
     };
+    CustomUserPreferences = {
+      "com.apple.Spotlight" = {
+        EnabledPreferenceRules = [ "System.iphoneApps" ];
+      };
+    };
   };
 
   system.activationScripts.restartDock.text = ''
