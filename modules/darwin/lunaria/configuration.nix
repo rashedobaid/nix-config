@@ -19,7 +19,8 @@
     maven
     nixpkgs-fmt
     nixfmt-rfc-style
-    obsidian
+    nodejs
+    nodePackages.npm
     opentofu
     pre-commit
     postman
@@ -50,6 +51,7 @@
       "hiddenbar"
       "linearmouse"
       "notion"
+      "obs"
       "telegram"
       "tunnelblick@beta"
       "viber"
