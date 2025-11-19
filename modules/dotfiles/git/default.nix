@@ -6,6 +6,9 @@
         name = "Rashed Obaid";
         email = "me@rashedobaid.com";
       };
+      push = {
+        autoSetupRemote = true; 
+      };
     };
   };
 }
