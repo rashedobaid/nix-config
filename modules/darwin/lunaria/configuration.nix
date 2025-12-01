@@ -27,6 +27,7 @@
     python313
     raycast
     rectangle
+    slack
     spotify
     terragrunt
     vscode
