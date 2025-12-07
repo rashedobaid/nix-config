@@ -30,6 +30,7 @@
     slack
     spotify
     terragrunt
+    terraform-docs
     vscode
     # winbox
     utm
