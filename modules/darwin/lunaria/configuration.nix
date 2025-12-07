@@ -54,6 +54,7 @@
       "notion"
       "obs"
       "telegram"
+      "trezor-suite"
       "tunnelblick@beta"
       "viber"
       "vlc"
