@@ -63,6 +63,7 @@
     ];
     brews = [
       "mas"
+      "openjdk@11"
     ];
     masApps = {
       AmorphousDiskMark = 1168254295;

@@ -14,7 +14,6 @@
         aspm = "sudo lspci -vv | awk '/ASPM/{print $0}' RS= | grep --color -P '(^[a-z0-9:.]+|ASPM )'";
         mkdir = "mkdir -p";
         colimastart = "colima start --arch aarch64 --vm-type vz --vz-rosetta --cpu 6 --memory 8 --disk 32";
-        ibrew = "arch -x86_64 /usr/local/bin/brew";
         deploy-nix = "sudo darwin-rebuild switch --flake ~/.config/nix#macbookpro";
       };
       plugins = [
