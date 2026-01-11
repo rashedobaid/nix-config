@@ -46,6 +46,37 @@
           "vertical" : true
         }
       }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productName" : "YICHIP",
+          "productID" : "0x3020",
+          "vendorID" : "0x3151"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 0
+        },
+        "distance" : {
+          "vertical" : 4
+        },
+        "reverse" : {
+          "vertical" : true
+        }
+      },
+      "pointer" : {
+        "acceleration" : 1,
+        "disableAcceleration" : true
+      },
+      "buttons" : {
+        "universalBackForward" : true
+      }
     }
   ]
 }
