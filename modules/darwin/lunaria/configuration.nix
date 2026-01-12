@@ -17,8 +17,8 @@
     iperf3
     jetbrains.idea-community
     maven
+    nixfmt
     nixpkgs-fmt
-    nixfmt-rfc-style
     nodejs
     nodePackages.npm
     opentofu
