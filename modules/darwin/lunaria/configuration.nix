@@ -15,7 +15,6 @@
     docker-credential-helpers
     gh
     iperf3
-    jetbrains.idea-community
     maven
     nixfmt
     nixpkgs-fmt
@@ -70,4 +69,13 @@
       WireGuard = 1451685025;
     };
   };
+  nixpkgs.overlays = [
+    (final: prev: {
+      jetbrains = prev.jetbrains // {
+        idea-oss = prev.jetbrains.idea-oss.override {
+          jdk = prev.jdk21;
+        };
+      };
+    })
+  ];
 }
