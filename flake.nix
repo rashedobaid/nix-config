@@ -25,20 +25,18 @@
           [
             home-manager.darwinModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.rashedobaid = import ./users/rashedobaid/default.nix;
             }
           ];
       };
-      nixosConfigurations."linux" = nixpkgs.lib.nixosSystem {
+      nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
         modules =
           (importAll ./modules/common) ++
-          (importAll ./modules/linux) ++
+          (importAll ./modules/nixos) ++
           [
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.rashedobaid = import ./users/rashedobaid/default.nix;
             }
