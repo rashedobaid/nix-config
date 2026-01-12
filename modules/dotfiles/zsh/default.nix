@@ -54,8 +54,8 @@
         bindkey '^n' history-search-forward
         bindkey '^[[Z' reverse-menu-complete
 
-        # OpenJDK 8
-        export JAVA_HOME="/usr/local/opt/openjdk@8/libexec/openjdk.jdk/Contents/Home"
+        export LANG=en_US.UTF-8
+        export LC_CTYPE=en_US.UTF-8
       '';
     };
 
