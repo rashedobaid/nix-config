@@ -6,9 +6,8 @@ on:
     - cron: '0 3 * * *'
 
 permissions:
-  contents: read
+  contents: write
   id-token: write
-  issues: write
   pull-requests: write
 
 jobs:
@@ -16,15 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - uses: actions/checkout@v5
-      - uses: DeterminateSystems/nix-installer-action@v20
+      - uses: actions/checkout@v6
+      - uses: DeterminateSystems/nix-installer-action@v21
       - id: update
-        uses: DeterminateSystems/update-flake-lock@v27
+        uses: DeterminateSystems/update-flake-lock@v28
         with:
           commit-msg: "chore(flake.lock): update"
           pr-title: "chore(flake.lock): update"
           pr-labels: auto-merge
-          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Merge
         run: gh pr merge --auto "${{ steps.update.outputs.pull-request-number }}" --rebase
         env:
