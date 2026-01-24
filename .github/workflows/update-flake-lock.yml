@@ -1,8 +1,15 @@
 name: Update flake.lock
+
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 3 * * *'
+
+permissions:
+  contents: read
+  id-token: write
+  issues: write
+  pull-requests: write
 
 jobs:
   update-flake-lock:
@@ -17,9 +24,9 @@ jobs:
           commit-msg: "chore(flake.lock): update"
           pr-title: "chore(flake.lock): update"
           pr-labels: auto-merge
-          token: "${{ secrets.GITHUB_TOKEN }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Merge
         run: gh pr merge --auto "${{ steps.update.outputs.pull-request-number }}" --rebase
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: ${{ steps.update.outputs.pull-request-number != '' }}
