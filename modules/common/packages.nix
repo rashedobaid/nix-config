@@ -5,6 +5,7 @@
     neofetch
     neovim
     ripgrep
+    tmux
     wget
     yq
   ];
