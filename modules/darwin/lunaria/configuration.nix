@@ -7,7 +7,6 @@
     alt-tab-macos
     azure-cli
     awscli2
-    betterdisplay
     colima
     discord
     docker
@@ -23,7 +22,6 @@
     opentofu
     pre-commit
     postman
-    python313
     raycast
     rectangle
     slack
@@ -33,6 +31,16 @@
     vscode
     # winbox
     utm
+    (python313.withPackages (
+      ps: with ps; [
+        pip
+        jmespath
+        requests
+        setuptools
+        pyyaml
+        pyopenssl
+      ]
+    ))
   ];
   homebrew = {
     enable = true;
@@ -50,7 +58,9 @@
       "firefox"
       "google-chrome"
       "hiddenbar"
+      "intellij-idea"
       "linearmouse"
+      "monitorcontrol"
       "notion"
       "obs"
       "telegram"
@@ -69,13 +79,4 @@
       WireGuard = 1451685025;
     };
   };
-  nixpkgs.overlays = [
-    (final: prev: {
-      jetbrains = prev.jetbrains // {
-        idea-oss = prev.jetbrains.idea-oss.override {
-          jdk = prev.jdk21;
-        };
-      };
-    })
-  ];
 }
