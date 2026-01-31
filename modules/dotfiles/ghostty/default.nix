@@ -4,7 +4,7 @@
     enable = true;
     package = pkgs.ghostty-bin;
     settings = {
-      theme = "TokyoNight Night";
+      theme = "Nord";
       font-size = 12;
       font-family = "JetBrainsMono Nerd Font Mono";
       adjust-cell-height = "25%";
