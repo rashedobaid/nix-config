@@ -14,7 +14,8 @@
         aspm = "sudo lspci -vv | awk '/ASPM/{print $0}' RS= | grep --color -P '(^[a-z0-9:.]+|ASPM )'";
         mkdir = "mkdir -p";
         colimastart = "colima start --arch aarch64 --vm-type vz --vz-rosetta --cpu 6 --memory 8 --disk 32";
-        deploy-nix = "sudo darwin-rebuild switch --flake ~/.config/nix#macbookpro";
+        deploy-nix = "f() { if [[ $(find . -mmin -60 -type f -name flake.lock | wc -c) -eq 0 ]]; then nix flake update; fi && sudo darwin-rebuild switch --flake .#$1 };f";
+        ibrew = "arch -x86_64 /usr/local/bin/brew";
       };
       plugins = [
         {
@@ -56,6 +57,7 @@
 
         export LANG=en_US.UTF-8
         export LC_CTYPE=en_US.UTF-8
+        export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
       '';
     };
 
