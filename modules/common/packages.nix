@@ -6,6 +6,7 @@
     neovim
     ripgrep
     tmux
+    tree
     wget
     yq
   ];
