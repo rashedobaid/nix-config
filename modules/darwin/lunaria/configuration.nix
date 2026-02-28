@@ -12,8 +12,11 @@
     docker
     docker-compose
     docker-credential-helpers
+    helm-docs
     gh
     iperf3
+    kubectl
+    kubernetes-helm
     maven
     nixfmt
     nixpkgs-fmt
@@ -28,6 +31,7 @@
     spotify
     terragrunt
     terraform-docs
+    tflint
     vscode
     # winbox
     utm
@@ -58,7 +62,7 @@
       "firefox"
       "google-chrome"
       "hiddenbar"
-      "intellij-idea"
+      "intellij-idea-ce"
       "linearmouse"
       "monitorcontrol"
       "notion"
@@ -71,6 +75,7 @@
       "zen"
     ];
     brews = [
+      "checkov"
       "mas"
       "openjdk@11"
     ];
