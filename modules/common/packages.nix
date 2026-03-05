@@ -1,8 +1,8 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     btop
+    fastfetch
     jq
-    neofetch
     neovim
     ripgrep
     tmux

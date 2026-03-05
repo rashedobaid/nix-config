@@ -35,6 +35,7 @@
     vscode
     # winbox
     utm
+    zed-editor
     (python313.withPackages (
       ps: with ps; [
         pip
