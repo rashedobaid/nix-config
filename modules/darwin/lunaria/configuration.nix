@@ -21,7 +21,6 @@
     nixfmt
     nixpkgs-fmt
     nodejs
-    nodePackages.npm
     opentofu
     pre-commit
     postman
