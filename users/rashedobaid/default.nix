@@ -1,14 +1,15 @@
 { ... }:
-let 
+let
   home = {
     username = "rashedobaid";
     stateVersion = "25.05";
   };
-in 
+in
 {
   home = home;
 
   imports = [
+    ../../modules/dotfiles/fastfetch/default.nix
     ../../modules/dotfiles/ghostty/default.nix
     ../../modules/dotfiles/linearmouse/default.nix
     ../../modules/dotfiles/zsh/default.nix
