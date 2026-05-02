@@ -64,6 +64,32 @@
     fzf = {
       enable = true;
       enableZshIntegration = true;
+      colors = {
+        fg = "#c0caf5";
+        bg = "#16161e";
+        hl = "#2ac3de";
+        "fg+" = "#c0caf5";
+        "bg+" = "#283457";
+        "hl+" = "#2ac3de";
+        pointer = "#ff007c";
+        info = "#545c7e";
+        spinner = "#ff007c";
+        header = "#ff9e64";
+        prompt = "#2ac3de";
+        marker = "#ff007c";
+        gutter = "#16161e";
+        border = "#27a1b9";
+        query = "#c0caf5:regular";
+        scrollbar = "#27a1b9";
+        separator = "#ff9e64";
+      };
+      defaultOptions = [
+        "--highlight-line"
+        "--info=inline-right"
+        "--ansi"
+        "--layout=reverse"
+        "--border=none"
+      ];
     };
 
     direnv = {
