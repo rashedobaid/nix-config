@@ -2,7 +2,7 @@
 let
   home = {
     username = "rashedobaid";
-    stateVersion = "25.05";
+    stateVersion = "26.05";
   };
 in
 {
