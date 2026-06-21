@@ -14,6 +14,7 @@
     docker-credential-helpers
     helm-docs
     gh
+    google-cloud-sdk
     iperf3
     kubectl
     kubernetes-helm
@@ -24,6 +25,7 @@
     opentofu
     pre-commit
     postman
+    pipx
     raycast
     rectangle
     slack
@@ -34,6 +36,7 @@
     # winbox
     utm
     zed-editor
+    zoom-us
     (python313.withPackages (
       ps: with ps; [
         pip
