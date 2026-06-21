@@ -57,7 +57,6 @@
 
         export LANG=en_US.UTF-8
         export LC_CTYPE=en_US.UTF-8
-        export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
       '';
     };
 

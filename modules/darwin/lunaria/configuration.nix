@@ -31,7 +31,6 @@
     terragrunt
     terraform-docs
     tflint
-    vscode
     # winbox
     utm
     zed-editor
@@ -62,7 +61,6 @@
       "firefox"
       "google-chrome"
       "hiddenbar"
-      "intellij-idea-ce"
       "linearmouse"
       "monitorcontrol"
       "notion"
@@ -72,12 +70,10 @@
       "tunnelblick@beta"
       "viber"
       "vlc"
-      "zen"
     ];
     brews = [
       "checkov"
       "mas"
-      "openjdk@11"
     ];
     masApps = {
       AmorphousDiskMark = 1168254295;
