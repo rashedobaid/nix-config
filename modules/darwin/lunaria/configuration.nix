@@ -4,13 +4,15 @@
     ulimit -n 2048
   '';
   environment.systemPackages = with pkgs; [
-    alt-tab-macos
+    ansible
+    ansible-lint
     azure-cli
     awscli2
     colima
     discord
     docker
     docker-compose
+    docker-buildx
     docker-credential-helpers
     helm-docs
     gh
@@ -18,22 +20,19 @@
     iperf3
     kubectl
     kubernetes-helm
-    maven
+    kustomize
     nixfmt
     nixpkgs-fmt
     nodejs
     opentofu
     pre-commit
-    postman
     pipx
     raycast
     rectangle
-    slack
     spotify
     terragrunt
     terraform-docs
     tflint
-    # winbox
     utm
     zed-editor
     zoom-us
@@ -70,7 +69,6 @@
       "obs"
       "telegram"
       "trezor-suite"
-      "tunnelblick@beta"
       "viber"
       "vlc"
     ];
