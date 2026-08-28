@@ -15,7 +15,6 @@
         mkdir = "mkdir -p";
         colimastart = "colima start --arch aarch64 --vm-type vz --vz-rosetta --cpu 6 --memory 8 --disk 32";
         deploy-nix = "f() { if [[ $(find . -mmin -60 -type f -name flake.lock | wc -c) -eq 0 ]]; then nix flake update; fi && sudo darwin-rebuild switch --flake .#$1 };f";
-        ibrew = "arch -x86_64 /usr/local/bin/brew";
       };
       plugins = [
         {

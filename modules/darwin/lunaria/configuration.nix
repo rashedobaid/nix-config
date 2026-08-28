@@ -49,13 +49,11 @@
   ];
   homebrew = {
     enable = true;
+    enableZshIntegration = true;
     onActivation = {
       autoUpdate = true;
-      cleanup = "zap";
+      cleanup = "uninstall";
       upgrade = true;
-    };
-    caskArgs = {
-      no_quarantine = true;
     };
     casks = [
       "aws-vpn-client"
