@@ -50,6 +50,17 @@
         zstyle ':completion:*' menu yes=long select
         zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+        ${
+          if (pkgs.stdenv.hostPlatform.system == "aarch64-darwin") then
+            ''
+              export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
+              alias lsblk="diskutil list"
+              ulimit -n 2048
+            ''
+          else
+            ""
+        }
+
         bindkey -e
         bindkey '^p' history-search-backward
         bindkey '^n' history-search-forward
@@ -57,6 +68,7 @@
 
         export LANG=en_US.UTF-8
         export LC_CTYPE=en_US.UTF-8
+        export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
       '';
     };
 
