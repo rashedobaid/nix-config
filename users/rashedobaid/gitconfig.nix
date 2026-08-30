@@ -7,7 +7,7 @@
         email = "me@rashedobaid.com";
       };
       push = {
-        autoSetupRemote = true; 
+        autoSetupRemote = true;
       };
     };
   };

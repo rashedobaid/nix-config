@@ -7,22 +7,31 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
+  outputs =
+    inputs@{
+      self,
+      nix-darwin,
+      nixpkgs,
+      home-manager,
+    }:
     let
       lib = nixpkgs.lib;
 
-      importAll = dir:
-        builtins.attrValues (builtins.mapAttrs
-          (name: _: dir + "/${name}")
-          (lib.filterAttrs (name: _: lib.hasSuffix ".nix" name) (builtins.readDir dir)));
+      importAll =
+        dir:
+        builtins.attrValues (
+          builtins.mapAttrs (name: _: dir + "/${name}") (
+            lib.filterAttrs (name: _: lib.hasSuffix ".nix" name) (builtins.readDir dir)
+          )
+        );
     in
     {
       darwinConfigurations."macbookpro" = nix-darwin.lib.darwinSystem {
         modules =
-          (importAll ./modules/common) ++
-          (importAll ./modules/darwin) ++
-          (importAll ./modules/darwin/lunaria) ++
-          [
+          (importAll ./modules/common)
+          ++ (importAll ./modules/darwin)
+          ++ (importAll ./modules/darwin/lunaria)
+          ++ [
             home-manager.darwinModules.home-manager
             {
               home-manager.useUserPackages = true;
@@ -32,9 +41,9 @@
       };
       nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
         modules =
-          (importAll ./modules/common) ++
-          (importAll ./modules/nixos) ++
-          [
+          (importAll ./modules/common)
+          ++ (importAll ./modules/nixos)
+          ++ [
             home-manager.nixosModules.home-manager
             {
               home-manager.useUserPackages = true;
