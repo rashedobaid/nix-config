@@ -9,7 +9,6 @@
     azure-cli
     awscli2
     colima
-    discord
     docker
     docker-compose
     docker-buildx
@@ -58,6 +57,7 @@
     casks = [
       "aws-vpn-client"
       "balenaetcher"
+      "discord"
       "firefox"
       "google-chrome"
       "hiddenbar"
