@@ -33,8 +33,6 @@
     terraform-docs
     tflint
     utm
-    zed-editor
-    zoom-us
     (python313.withPackages (
       ps: with ps; [
         pip
@@ -69,6 +67,7 @@
       "trezor-suite"
       "viber"
       "vlc"
+      "zed"
     ];
     brews = [
       "checkov"
