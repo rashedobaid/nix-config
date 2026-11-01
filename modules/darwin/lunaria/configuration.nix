@@ -44,6 +44,7 @@
       ]
     ))
   ];
+
   homebrew = {
     enable = true;
     enableZshIntegration = true;
@@ -61,8 +62,7 @@
       "hiddenbar"
       "linearmouse"
       "monitorcontrol"
-      "notion"
-      "obs"
+      "obsidian"
       "telegram"
       "trezor-suite"
       "viber"
